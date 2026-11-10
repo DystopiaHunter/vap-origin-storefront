@@ -11,3 +11,7 @@ node_modules
 .git
 .DS_Store
 .npmrc
+/migrations
+/worker.js
+/wrangler.jsonc
+/public-preview.js

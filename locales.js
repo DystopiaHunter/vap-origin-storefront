@@ -1,0 +1,157 @@
+const localePairs = [
+  ['Browse','Explorer'],['Newest','Nouveautés'],['All goods','Tous les produits'],['All','Tout'],['Shop by','Catégories'],['The shop','La boutique'],['My account','Mon compte'],['Admin panel','Administration'],['Seller app','Espace vendeur'],['Settings','Réglages'],['Bag','Panier'],['Open bag','Ouvrir le panier'],['Close bag','Fermer le panier'],['Sign in','Connexion'],['Sign out','Déconnexion'],['Shop','Boutique'],['Account','Compte'],['New','Nouveautés'],['Admin','Admin'],['Accent','Couleur d’accent'],['Color','Couleur'],['Dark','Sombre'],['Paid','Payée'],['All orders','Toutes les commandes'],['Pending delivery','En attente de livraison'],['Unpaid','Non payées'],['Filter orders','Filtrer les commandes'],['Saved automatically','Enregistré automatiquement'],['Vap\'Origin','Vap\'Origin'],
+  ['A little more local.','Un peu plus local.'],['Good things, picked with care. Ready for pickup when you are.','De belles choses, choisies avec soin. Prêtes à être récupérées.'],
+  ['A small shop for everyday good','Une boutique de belles choses au quotidien'],['Thoughtful finds for slower mornings and brighter days.','Des trouvailles choisies pour embellir chaque journée.'],['Little things, made better.','De belles trouvailles, au quotidien.'],['Come in and find your new favourite.','Entrez et trouvez votre nouveau coup de cœur.'],['Find something lovely','Trouvez votre prochain coup de cœur'],['Search products','Rechercher des produits'],['Freshly gathered','Fraîchement sélectionnés'],['All the good things','Toutes nos trouvailles'],['See everything','Tout voir'],['thoughtful finds, ready for pickup','belles trouvailles, prêtes à être récupérées'],['thoughtful find, ready for pickup','belle trouvaille, prête à être récupérée'],['Be the first to review','Soyez le premier à donner votre avis'],['Just in','Nouveauté'],['Bestseller','Meilleure vente'],['Made nearby','Fabriqué à proximité'],
+  ['Your corner','Votre espace'],['My account','Mon compte'],['Sign in or create an account to see your pickup orders.','Connectez-vous ou créez un compte pour suivre vos commandes.'],['Sign in / Join','Connexion / Inscription'],['Hello,','Bonjour,'],['Manage your details and keep an eye on your orders.','Gérez vos informations et suivez vos commandes.'],['Your details','Vos informations'],['Name','Nom'],['Email','Adresse e-mail'],['Save details','Enregistrer'],['Pickup orders','Commandes'],['Your orders will show up here.','Vos commandes apparaîtront ici.'],['Your delivered orders will show a review form here.','Vous pourrez évaluer votre livraison une fois la commande livrée.'],['Pickup','Retrait'],['Awaiting confirmation','En attente de confirmation'],['Ready for pickup','Prête à être récupérée'],['Delivered','Livrée'],['Canceled','Annulée'],['Order','Commande'],['Rate your delivery','Évaluez votre livraison'],['Choose stars','Choisissez une note'],['star','étoile'],['stars','étoiles'],['Note for the shop','Un mot pour la boutique'],['How was your delivery?','Comment s’est passée votre livraison ?'],['Send review','Envoyer mon avis'],['Edit review','Modifier mon avis'],['Your delivery review:','Votre avis sur la livraison :'],['Thanks for your feedback.','Merci pour votre retour.'],
+  ['Your shop, your rules','Votre boutique, vos choix'],['Changes save as you make them.','Vos modifications sont enregistrées automatiquement.'],['Overview','Vue d’ensemble'],['Products','Produits'],['Pages','Pages'],['Orders','Commandes'],['Appearance','Apparence'],['Update listings, prices, and photos.','Modifiez les fiches, les prix et les photos.'],['Add product','Ajouter un produit'],['Edit','Modifier'],['Delete','Supprimer'],['No products yet. Add your first product.','Aucun produit. Ajoutez votre premier produit.'],['Custom pages appear in the shop navigation.','Les pages personnalisées apparaissent dans la navigation.'],['Add page','Ajouter une page'],['No custom pages. Create one to add it to the navigation.','Aucune page personnalisée. Créez-en une pour l’ajouter à la navigation.'],['Pickup orders','Commandes à récupérer'],['No orders yet.','Aucune commande pour le moment.'],['Shop appearance','Apparence de la boutique'],['Shop name','Nom de la boutique'],['Tagline','Slogan'],['Homepage headline','Titre de la page d’accueil'],['Accent color','Couleur principale'],['Custom accent','Couleur personnalisée'],['Highlight color','Couleur de mise en valeur'],['Pickup information','Informations de retrait'],['Store settings','Paramètres de la boutique'],['Customers order online and collect in person. No payment is taken on this demo storefront. All store data is saved in this browser.','Les clients commandent en ligne et récupèrent leur achat en personne. Cette démo ne traite aucun paiement. Les données sont enregistrées dans ce navigateur.'],['Restore starter shop','Réinitialiser la boutique'],['Restore the starter shop? This clears locally saved shop changes and orders.','Réinitialiser la boutique ? Les modifications et commandes enregistrées dans ce navigateur seront supprimées.'],['Products in shop','Produits en boutique'],['Total orders','Total des commandes'],['To confirm','À confirmer'],['Latest orders','Dernières commandes'],['Mark ready for pickup','Marquer prête à récupérer'],['Mark awaiting confirmation','Remettre en attente'],['New pickup orders will appear here.','Les nouvelles commandes apparaîtront ici.'],['Quick start','Pour commencer'],['Manage your products, create pages, set your store colors, and keep pickup orders moving. Every change saves automatically on this device.','Gérez vos produits, créez des pages, choisissez vos couleurs et suivez les commandes. Les modifications sont enregistrées sur cet appareil.'],
+  ['Make it yours','Personnalisez votre boutique'],['Site settings','Réglages du site'],['Choose how the shop looks and reads on this device.','Choisissez l’apparence et la langue de la boutique sur cet appareil.'],['Reading & appearance','Lecture et apparence'],['Font family','Police'],['Website theme','Thème du site'],['Light','Clair'],['Midnight','Minuit'],['Mist','Brume'],['Text size','Taille du texte'],['Preview','Aperçu'],['A little more good.','De belles choses, tout simplement.'],['Thoughtful finds for slower mornings and brighter days.','Des trouvailles choisies pour embellir chaque journée.'],['Language','Langue'],['French','Français'],['English','Anglais'],
+  ['Your bag','Votre panier'],['Order now, pick up in person. No online payment.','Commandez maintenant et récupérez votre achat en personne. Aucun paiement en ligne.'],['Your bag is waiting for something good.','Votre panier attend de belles trouvailles.'],['Order total','Total'],['Place pickup order','Passer la commande'],['No payment is collected online. We\'ll confirm your pickup with you.','Aucun paiement n’est effectué en ligne. Nous confirmerons avec vous le retrait de votre commande.'],['Decrease quantity','Diminuer la quantité'],['Increase quantity','Augmenter la quantité'],['Remove','Retirer'],['Close bag','Fermer le panier'],['Sign in or create an account to place an order.','Connectez-vous ou créez un compte pour commander.'],['Sign in or create a customer account before placing an order.','Connectez-vous ou créez un compte client avant de commander.'],['Sign out and sign in with a customer account to place an order.','Déconnectez-vous puis connectez-vous avec un compte client pour commander.'],['Pickup order placed. No payment taken.','Commande enregistrée. Aucun paiement effectué.'],['Sign in or create an account to place an order.','Connectez-vous ou créez un compte pour commander.'],
+  ['A good thing to come back to','Ravi de vous revoir'],['Welcome back.','Bon retour parmi nous.'],['Sign in to manage your details and pickup orders.','Connectez-vous pour gérer vos informations et vos commandes.'],['Make yourself at home.','Bienvenue chez vous.'],['Create an account to place and track pickup orders.','Créez un compte pour passer et suivre vos commandes.'],['Password','Mot de passe'],['Create account','Créer un compte'],['New around here?','Nouveau ici ?'],['Already have an account?','Vous avez déjà un compte ?'],['Store owner demo:','Compte démo administrateur :'],['Demo only: account data stays in this browser and passwords are not suitable for real customer accounts.','Démo uniquement : les comptes sont enregistrés dans ce navigateur. Ces mots de passe ne sont pas adaptés à un vrai site.'],['Seller app demo:','Compte démo vendeur :'],
+  ['Sign in to manage your details and pickup orders.','Connectez-vous pour gérer vos informations et vos commandes.'],['Email or password is not correct.','Adresse e-mail ou mot de passe incorrect.'],['An account already uses this email.','Un compte utilise déjà cette adresse e-mail.'],['Welcome to your admin panel.','Bienvenue dans l’administration.'],['Seller app ready.','Espace vendeur prêt.'],['You are signed in.','Vous êtes connecté.'],['You are signed out.','Vous êtes déconnecté.'],['Your details are saved.','Vos informations sont enregistrées.'],['Product saved.','Produit enregistré.'],['Product removed.','Produit supprimé.'],['Page saved.','Page enregistrée.'],['Page removed.','Page supprimée.'],['Order status updated.','Statut de la commande mis à jour.'],['Your pickup order is ready.','Votre commande est prête à être récupérée.'],['A page needs a title.','Une page doit avoir un titre.'],['Page content (plain text; line breaks are kept)','Contenu de la page (texte brut ; les retours à la ligne sont conservés)'],['New page title','Titre de la nouvelle page'],['Edit page title','Modifier le titre de la page'],
+  ['From the shop','La boutique'],['Search results','Résultats de recherche'],['Nothing here just yet. Try another search or browse all goods.','Rien ici pour le moment. Essayez une autre recherche ou parcourez tous les produits.'],['thoughtful find','belle trouvaille'],['thoughtful finds','belles trouvailles'],['ready for pickup','prêt à être récupéré'],['ready for pickup','prêtes à être récupérées'],
+  ['Seller workspace','Espace vendeur'],['Manage delivery times, order changes, and payment confirmation.','Gérez les horaires, les commandes et la confirmation des paiements.'],['App theme','Thème de l’application'],['Theme name','Nom du thème'],['Accent','Accentuation'],['Orders','Commandes'],['Need delivery','À livrer'],['Unpaid','Non payées'],['Add an order','Ajouter une commande'],['Customer name','Nom du client'],['Customer email','E-mail du client'],['Product','Produit'],['Quantity','Quantité'],['Delivery date and time','Date et heure de livraison'],['Add order to list','Ajouter à la liste'],['Order list','Liste des commandes'],['All orders','Toutes les commandes'],['Pending delivery','En attente de livraison'],['Edit order details','Modifier la commande'],['Order total','Total de la commande'],['Save order changes','Enregistrer les modifications'],['Confirm delivered','Confirmer la livraison'],['Undo delivery','Annuler la confirmation'],['Mark paid','Marquer payée'],['Mark unpaid','Marquer non payée'],['Cancel order','Annuler la commande'],['Order canceled','Commande annulée'],['Private customer note','Note privée sur le client'],['Reliability rating','Note de fiabilité'],['Private note','Note privée'],['Payment, communication, or delivery details','Paiement, communication ou livraison'],['Save private note','Enregistrer la note privée'],['Customer delivery feedback','Avis du client sur la livraison'],['No written note','Aucun commentaire écrit'],['No note added','Aucune note ajoutée'],['No orders match this filter.','Aucune commande ne correspond à ce filtre.'],['Choose a product','Choisir un produit'],['Choose a product to add','Choisir un produit à ajouter'],['Order product','Produit commandé'],['New order product','Nouveau produit'],['Item quantity','Quantité du produit'],['Add item','Ajouter un article'],['Choose a product and valid quantity first.','Choisissez d’abord un produit et une quantité valide.'],['Order added to the seller list.','Commande ajoutée à la liste du vendeur.'],['Order changes saved.','Modifications de la commande enregistrées.'],['Delivery confirmed.','Livraison confirmée.'],['Delivery confirmation undone.','Confirmation de livraison annulée.'],['Payment marked as received.','Paiement marqué comme reçu.'],['Payment marked unpaid.','Paiement marqué comme non payé.'],['Order canceled.','Commande annulée.'],['Cancel order','Annuler la commande'],['Cancel order ','Annuler la commande '],['Private customer note','Note privée sur le client'],['Private customer note saved.','Note privée enregistrée.'],['Thanks for rating your delivery.','Merci d’avoir évalué la livraison.'],['A delivered order is required to post a verified review.','Une commande livrée est nécessaire pour publier un avis vérifié.'],['Complete a delivery for this product to leave a verified review.','Vous devez avoir reçu ce produit pour publier un avis vérifié.'],['Sign in','Connexion'],['and complete a delivery to leave a verified review.','et recevez le produit pour publier un avis vérifié.'],['Verified purchase','Achat vérifié'],['Your rating','Votre note'],['Your review','Votre avis'],['Share your experience with this product','Partagez votre expérience avec ce produit'],['Update review','Modifier mon avis'],['Post review','Publier mon avis'],['Customer reviews','Avis clients'],['Ratings and notes from customers.','Notes et avis des clients.'],['No reviews yet. Your experience can help the next customer.','Aucun avis pour le moment. Votre expérience peut aider les prochains clients.'],['No reviews yet','Aucun avis pour le moment'],['Add to bag','Ajouter au panier'],['Close product details','Fermer les détails du produit'],['View product details','Voir les détails du produit'],['Order details not recorded','Détails de commande indisponibles'],['Scheduled:','Prévue :'],['Time not scheduled','Horaire non défini'],['Delivery scheduled:','Livraison prévue :'],['Remove this product from the shop?','Retirer ce produit de la boutique ?'],['Delete this page?','Supprimer cette page ?'],['Choose a product to add','Choisir un produit à ajouter'],['Image URL (optional if importing)','URL de l’image (facultative si vous importez un fichier)'],['Import product image','Importer une image du produit'],['PNG, JPG, or WebP. Images are resized and stored in this browser.','PNG, JPG ou WebP. Les images sont redimensionnées et enregistrées dans ce navigateur.'],['Choose a PNG, JPG, or WebP image under 15 MB.','Choisissez une image PNG, JPG ou WebP de moins de 15 Mo.'],['That image could not be imported. Try another PNG or JPG.','Impossible d’importer cette image. Essayez un autre fichier PNG ou JPG.'],
+  ['Sunday Ceramics Mug','Mug en céramique du dimanche'],['Wildflower Honey','Miel de fleurs sauvages'],['Citrus Hand Wash','Savon liquide aux agrumes'],['Olive Wood Spoon','Cuillère en bois d’olivier'],['Market Tote','Sac de marché'],['Garden Notes Journal','Carnet du jardin'],['Sea Salt Chocolate','Chocolat au sel marin'],['Linen Tea Towel','Torchon en lin'],['Home','Maison'],['Pantry','Épicerie'],['Body','Corps'],['Everyday','Quotidien'],['Our little shop','Notre boutique'],['Our little shop','Notre boutique'],['A hand-finished stoneware mug for the first cup and the last.','Une tasse en grès façonnée à la main, pour le premier café comme pour le dernier.'],['Golden, small-batch honey gathered from local wildflower fields.','Un miel doré en petite série, récolté dans les champs de fleurs sauvages locaux.'],['A gentle botanical cleanser with bright bergamot and orange.','Un nettoyant doux aux plantes, relevé de bergamote et d’orange.'],['A sturdy, beautifully grained kitchen spoon made to be used every day.','Une cuillère de cuisine solide au beau veinage, pensée pour servir tous les jours.'],['A roomy cotton canvas carryall for market mornings and little errands.','Un grand sac cabas en toile de coton, pour le marché et les petites sorties.'],['A soft-cover notebook for lists, plans, sketches, and small ideas.','Un carnet souple pour vos listes, projets, croquis et idées.'],['Dark chocolate, crisp sea salt, and a short ingredient list.','Du chocolat noir, du sel marin croquant et une liste d’ingrédients courte.'],['Washed linen in a soft check, made for daily kitchen rituals.','Du lin lavé à carreaux discrets, pour les gestes du quotidien en cuisine.']
+];
+
+localePairs.push(
+  ['Categories','Catégories'],['Accounts','Comptes'],['Role','Rôle'],['Owner','Propriétaire'],['Admin','Admin'],['Seller','Vendeur'],['Customer','Client'],
+  ['Demo mode: this account manager is stored in this browser and does not verify email addresses. Before publishing for real users, connect secure authentication and shared storage.','Mode démo : les comptes sont enregistrés dans ce navigateur et les adresses e-mail ne sont pas vérifiées. Avant une vraie mise en ligne, configurez une authentification sécurisée et un stockage partagé.'],
+  ['Create a staff account','Créer un compte pour l’équipe'],['Temporary password','Mot de passe provisoire'],['Create account','Créer le compte'],['Existing accounts','Comptes existants'],['Search accounts','Rechercher des comptes'],['Search name, email, or role','Rechercher un nom, une adresse e-mail ou un rôle'],['No accounts yet.','Aucun compte pour le moment.'],['Delete','Supprimer'],['Delete account','Supprimer le compte'],
+  ['Manage product categories','Gérer les catégories de produits'],['Deleting a category permanently removes every product in that category from the shop and removes those products from active carts. Past orders remain in order history.','La suppression d’une catégorie retire définitivement tous ses produits de la boutique et des paniers en cours. Les anciennes commandes restent dans l’historique.'],['Delete category','Supprimer la catégorie'],['No categories to manage.','Aucune catégorie à gérer.'],['products','produits'],['product','produit'],['account role','rôle du compte'],['Account role updated.','Rôle du compte mis à jour.'],['Account deleted.','Compte supprimé.'],['Staff account created.','Compte de l’équipe créé.'],['The owner account is reserved for Noah.','Le compte propriétaire est réservé à Noah.'],['Use a password with at least 8 characters.','Utilisez un mot de passe d’au moins 8 caractères.'],['The owner account already exists. Sign in to claim the owner account.','Le compte propriétaire existe déjà. Connectez-vous pour y accéder.'],['Owner account created for Noah.','Compte propriétaire de Noah créé.'],['Welcome, Noah. You are the shop owner.','Bienvenue Noah. Vous êtes propriétaire de la boutique.'],['Category and its products deleted.','Catégorie et produits associés supprimés.'],['Category and its products deleted.','Catégorie et produits associés supprimés.']
+);
+
+localePairs.push(
+  ['Delivery delay / time','Délai / horaire de livraison'],['Choose a delivery time','Choisissez un horaire de livraison'],['In about 1 hour','Dans environ 1 heure'],['In about 2 hours','Dans environ 2 heures'],['In about 4 hours','Dans environ 4 heures'],['Tomorrow morning','Demain matin'],['Tomorrow afternoon','Demain après-midi'],['Choose a date and time','Choisir une date et une heure'],['Choose a delivery date and time','Choisir une date et une heure de livraison'],['Choose a delivery time before placing your order.','Choisissez un horaire de livraison avant de commander.'],['Choose a delivery date and time.','Choisissez une date et une heure de livraison.'],['Choose a future delivery time.','Choisissez une date et une heure futures.'],['Payment must be confirmed before delivery.','Le paiement doit être confirmé avant la livraison.'],['Mark the payment as paid before confirming delivery.','Confirmez le paiement avant de valider la livraison.'],['Payment cannot be changed after delivery.','Le paiement ne peut plus être modifié après la livraison.'],['Delete permanently','Supprimer définitivement'],['Delete order','Supprimer la commande'],['This cannot be undone.','Cette action est irréversible.'],['Order permanently deleted.','Commande définitivement supprimée.'],['Restore owner account','Récupérer le compte propriétaire']
+);
+
+const localePairsSorted=localePairs.slice().sort((a,b)=>Math.max(b[0].length,b[1].length)-Math.max(a[0].length,a[1].length));
+function localizedText(value,locale=state.preferences?.locale||'fr'){
+  let result=String(value);
+  for(const [english,french] of localePairsSorted){
+    const source=locale==='fr'?english:french;
+    const target=locale==='fr'?french:english;
+    if(result.includes(source))result=result.split(source).join(target);
+  }
+  if(locale==='fr'){
+    result=result.replace('Accentuationuation','Couleur d’accent');
+    result=result.replace(/^Role for (.+)$/,'Rôle pour $1');
+    result=result.replace(/Delete the account for (.+)\? Past orders will be kept\./,'Supprimer le compte de $1 ? Les commandes passées seront conservées.');
+    result=result.replace(/Delete category "(.+)" and its (\d+) product\(s\)\?/,'Supprimer la catégorie « $1 » et ses $2 produits ?');
+    result=result.replace(/(\d+) products?/gi,(match,count)=>`${count} produit${Number(count)>1?'s':''}`);
+    result=result.replace(/(\d+) accounts?/gi,(match,count)=>`${count} compte${Number(count)>1?'s':''}`);
+    result=result.replace(/^Add (.+) to bag$/,'Ajouter $1 au panier');
+    result=result.replace(/^Add (.+) to your bag$/,'Ajouter $1 au panier');
+    result=result.replace(/^View (.+) details$/,'Voir les détails de $1');
+  }else{
+    result=result.replace(/^Rôle pour (.+)$/,'Role for $1');
+    result=result.replace(/Supprimer le compte de (.+) \? Les commandes passées seront conservées\./,'Delete the account for $1? Past orders will be kept.');
+    result=result.replace(/Supprimer la catégorie « (.+) » et ses (\d+) produits? \?/,'Delete category "$1" and its $2 product(s)?');
+    result=result.replace(/(\d+) produits?/gi,(match,count)=>`${count} product${Number(count)>1?'s':''}`);
+    result=result.replace(/(\d+) comptes?/gi,(match,count)=>`${count} account${Number(count)>1?'s':''}`);
+    result=result.replace(/^Ajouter (.+) au panier$/,'Add $1 to bag');
+    result=result.replace(/^Voir les détails de (.+)$/,'View $1 details');
+  }
+  if(locale==='fr'){
+    result=result.replace(/(\d+) thoughtful finds?, ready for pickup/gi,(match,count)=>`${count} ${Number(count)===1?'belle trouvaille prête à être récupérée':'belles trouvailles prêtes à être récupérées'}`);
+    result=result.replace(/(\d+) orders?/gi,(match,count)=>`${count} commande${Number(count)>1?'s':''}`);
+    result=result.replace(/(\d+) products?/gi,(match,count)=>`${count} produit${Number(count)>1?'s':''}`);
+    result=result.replace(/Order (GG-[A-Z0-9-]+)/g,'Commande $1');
+    result=result.replace(/(\d+) × /g,'$1 × ');
+  }else{
+    result=result.replace(/(\d+) belles trouvailles prêtes à être récupérées/gi,'$1 thoughtful finds, ready for pickup');
+    result=result.replace(/(\d+) belle trouvaille prête à être récupérée/gi,'$1 thoughtful find, ready for pickup');
+    result=result.replace(/(\d+) commandes?/gi,'$1 orders');
+    result=result.replace(/(\d+) produits?/gi,'$1 products');
+    result=result.replace(/Commande (GG-[A-Z0-9-]+)/g,'Order $1');
+  }
+  return result;
+}
+function localizeDom(){
+  document.documentElement.lang=state.preferences?.locale||'fr';
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+  const textNodes=[];
+  while(walker.nextNode())textNodes.push(walker.currentNode);
+  for(const node of textNodes){
+    if(node.parentElement?.closest('script,style'))continue;
+    const translated=localizedText(node.nodeValue);
+    if(translated!==node.nodeValue)node.nodeValue=translated;
+  }
+  document.querySelectorAll('#app [placeholder],#app [aria-label],#app [title],#cartDrawer [aria-label],#authModal [aria-label],#productModal [aria-label]').forEach(node=>{
+    for(const attribute of ['placeholder','aria-label','title']){
+      const value=node.getAttribute(attribute);
+      if(value)node.setAttribute(attribute,localizedText(value));
+    }
+  });
+  document.title=`${state.store.name} | ${state.preferences.locale==='fr'?'De belles trouvailles au quotidien':'Little things, made better'}`;
+}
+
+const localeOriginalSettingsPage=settingsPage;
+settingsPage=function(){
+  const current=state.preferences.locale||'fr';
+  return localeOriginalSettingsPage().replace('<form id="preferencesForm" class="form-grid">','<form id="preferencesForm" class="form-grid"><div class="field"><label for="siteLanguage">Language</label><select id="siteLanguage" name="locale"><option value="fr" '+(current==='fr'?'selected':'')+'>Français</option><option value="en" '+(current==='en'?'selected':'')+'>English</option></select></div>');
+};
+const localeOriginalBindPage=bindPage;
+bindPage=function(){
+  localeOriginalBindPage();
+  const language=document.getElementById('siteLanguage');
+  if(language)language.addEventListener('change',event=>{
+    state.preferences.locale=event.target.value;
+    save();
+    shell();
+  });
+};
+
+const localeOriginalShell=shell;
+shell=function(){localeOriginalShell();localizeDom()};
+const localeOriginalRenderPage=renderPage;
+renderPage=function(){localeOriginalRenderPage();localizeDom()};
+const localeOriginalRenderAuth=renderAuth;
+renderAuth=function(){localeOriginalRenderAuth();localizeDom()};
+const localeOriginalDrawCart=drawCart;
+drawCart=function(){localeOriginalDrawCart();localizeDom()};
+const localeOriginalProductEditor=productEditor;
+productEditor=function(id){localeOriginalProductEditor(id);localizeDom()};
+const localeOriginalProductDetail=productDetail;
+productDetail=function(id){localeOriginalProductDetail(id);localizeDom()};
+const localeOriginalToast=toast;
+toast=function(message){localeOriginalToast(localizedText(message))};
+
+const localeOriginalConfirm=window.confirm.bind(window);
+window.confirm=message=>localeOriginalConfirm(localizedText(message));
+const localeOriginalPrompt=window.prompt.bind(window);
+window.prompt=(message,defaultValue)=>localeOriginalPrompt(localizedText(message),defaultValue);
+
+const starterTranslations={
+  store:{tagline:['Little things, made better.','De belles trouvailles, au quotidien.'],intro:['Thoughtful finds for slower mornings and brighter days.','Des trouvailles choisies pour embellir chaque journée.'],pickup:['Orders are collected in person at our shop. We will email you when your order is ready.','Les commandes se récupèrent à la boutique. Nous vous enverrons un e-mail dès qu’elles seront prêtes.']},
+  products:{
+    p1:['Sunday Ceramics Mug','Mug en céramique du dimanche','A hand-finished stoneware mug for the first cup and the last.','Une tasse en grès façonnée à la main, pour le premier café comme pour le dernier.','Home','Maison','Bestseller','Meilleure vente'],
+    p2:['Wildflower Honey','Miel de fleurs sauvages','Golden, small-batch honey gathered from local wildflower fields.','Un miel doré en petite série, récolté dans les champs de fleurs sauvages locaux.','Pantry','Épicerie','Just in','Nouveauté'],
+    p3:['Citrus Hand Wash','Savon liquide aux agrumes','A gentle botanical cleanser with bright bergamot and orange.','Un nettoyant doux aux plantes, relevé de bergamote et d’orange.','Body','Corps','',''],
+    p4:['Olive Wood Spoon','Cuillère en bois d’olivier','A sturdy, beautifully grained kitchen spoon made to be used every day.','Une cuillère de cuisine solide au beau veinage, pensée pour servir tous les jours.','Home','Maison','Made nearby','Fabriqué à proximité'],
+    p5:['Market Tote','Sac de marché','A roomy cotton canvas carryall for market mornings and little errands.','Un grand sac cabas en toile de coton, pour le marché et les petites sorties.','Everyday','Quotidien','',''],
+    p6:['Garden Notes Journal','Carnet du jardin','A soft-cover notebook for lists, plans, sketches, and small ideas.','Un carnet souple pour vos listes, projets, croquis et idées.','Everyday','Quotidien','Just in','Nouveauté'],
+    p7:['Sea Salt Chocolate','Chocolat au sel marin','Dark chocolate, crisp sea salt, and a short ingredient list.','Du chocolat noir, du sel marin croquant et une liste d’ingrédients courte.','Pantry','Épicerie','',''],
+    p8:['Linen Tea Towel','Torchon en lin','Washed linen in a soft check, made for daily kitchen rituals.','Du lin lavé à carreaux discrets, pour les gestes du quotidien en cuisine.','Home','Maison','','']
+  },
+  about:['We believe everyday things deserve a little more thought. Vap\'Origin brings together useful, well-made goods from people who care about how things are made. Come by, have a look around, and take home something lovely.','Nous croyons que les objets du quotidien méritent une attention particulière. Vap\'Origin réunit des produits utiles et bien fabriqués, imaginés par des personnes qui se soucient de leur création. Entrez, découvrez la boutique et repartez avec un bel objet.']
+};
+function migrateStarterCopy(){
+  let changed=false;
+  for(const [key,[english,french]] of Object.entries(starterTranslations.store))if(state.store[key]===english){state.store[key]=french;changed=true}
+  for(const product of state.products){
+    const translation=starterTranslations.products[product.id];
+    if(!translation)continue;
+    const [englishName,frenchName,englishDescription,frenchDescription,englishCategory,frenchCategory,englishTag,frenchTag]=translation;
+    if(product.name===englishName)product.name=frenchName,changed=true;
+    if(product.description===englishDescription)product.description=frenchDescription,changed=true;
+    if(product.category===englishCategory)product.category=frenchCategory,changed=true;
+    if(englishTag&&product.tag===englishTag)product.tag=frenchTag,changed=true;
+  }
+  for(const page of state.pages)if(page.id==='p-about'&&page.content===starterTranslations.about[0])page.content=starterTranslations.about[1],changed=true;
+  if(changed)localStorage.setItem(KEY,JSON.stringify(state));
+}
+state.preferences={...appearanceDefaults,locale:'fr',...(state.preferences||{})};
+migrateStarterCopy();
+const localeSetTheme=setTheme;
+setTheme=function(){localeSetTheme();localizeDom()};
+shell();
